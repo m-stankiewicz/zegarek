@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zegarek + Vue</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+    <script src="script.min.js" async></script>
+</head>
+<body>
+
+    <div id="zegar" class="zegarek">
+        <h2>Teraz jest</h2>
+        <span v-html="Godzina"></span>:<span v-html="Minuta"></span>:<span v-html="Sekunda"></span> <br><span v-html="Dzien"></span> <span v-html="Miesiac"></span> <span v-html="Rok"></span> r.<br>
+    </div>
+    <div id="zegar2" class="zegarek">
+        <div v-if="isMoreThanZero">
+            <h2>Do matury zostało</h2>
+            {{Dni}} <span v-if="isNotOneDay">dni</span> <span v-if="!isNotOneDay">dzień</span>  {{Godziny}}:{{Minuty}}:{{Sekundy}}<br>
+        </div>
+    </div>
+    <div id="zegar3" class="zegarek">
+        <h2>Do sesji zostało</h2>
+        {{Dni}} <span v-if="isNotOneDay">dni</span> <span v-if="!isNotOneDay">dzień</span>  {{Godziny}}:{{Minuty}}:{{Sekundy}}<br>
+    </div>
+</body>
+</html>

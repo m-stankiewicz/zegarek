@@ -1,0 +1,20 @@
+body
+{
+    padding-top:80px;
+    background-image: linear-gradient(-90deg,purple,orange);
+}
+.zegarek
+{
+    margin-top:50px;
+    width: 100%;
+    text-align: center;
+    color: #1200ff;
+    font-size: 30px;
+}
+@media(max-width:500px)
+{
+    body
+    {
+        padding-top: 0px;
+    }
+}
