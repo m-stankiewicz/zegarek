@@ -23,8 +23,10 @@
         </div>
     </div>
     <div id="zegar3" class="zegarek">
-        <h2>Do sesji zostało</h2>
-        {{Dni}} <span v-if="isNotOneDay">dni</span> <span v-if="!isNotOneDay">dzień</span>  {{Godziny}}:{{Minuty}}:{{Sekundy}}<br>
+        <div v-if="isMoreThanZero">
+            <h2>Do matury zostało</h2>
+            <span v-html="Dni"></span> <span v-if="isNotOneDay">dni</span> <span v-if="!isNotOneDay">dzień</span>  <span v-html="Godziny"></span>:<span v-html="Minuty"></span>:<span v-html="Sekundy"><br>
+        </div>
     </div>
 </body>
 </html>
