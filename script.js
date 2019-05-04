@@ -37,7 +37,7 @@ function timerData (year,month,day,hour,minute,second,milisecond)
     }
 }
 
-var maturaTimeData = new timerData(2019, 4 , 6 , 8 , 0 , 0 , 0);
+var maturaTimeData = new timerData(2019, 4 , 6 , 9 , 0 , 0 , 0);
 var sessionTimeData = new timerData(2019, 6 , 10 , 9 , 0 , 0 , 0);
 var app = new Vue({
     el: '#zegar',
