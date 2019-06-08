@@ -18,7 +18,7 @@ var mainTimeData = {
 };
 function timerData (year,month,day,hour,minute,second,milisecond)
 {
-    this.dayOfEvent = new Date(year, month , day , hour , minute , second , milisecond);
+    this.dayOfEvent = new Date(year, month , day , hour-1 , minute , second , milisecond);
     this.secondsToEvent = Math.floor((this.dayOfEvent-actualTime)/1000)+1
     this.Sekundy = this.secondsToEvent%60<10?'0'+this.secondsToEvent%60:this.secondsToEvent%60;
     this.Minuty = Math.floor(this.secondsToEvent/60)%60<10?'0'+Math.floor(this.secondsToEvent/60)%60:Math.floor(this.secondsToEvent/60)%60;
@@ -37,7 +37,7 @@ function timerData (year,month,day,hour,minute,second,milisecond)
     }
 }
 
-var maturaTimeData = new timerData(2019, 4 , 6 , 9 , 0 , 0 , 0);
+var maturaTimeData = new timerData(2019, 5 , 6 , 9 , 0 , 0 , 0);
 var sessionTimeData = new timerData(2019, 6 , 10 , 9 , 0 , 0 , 0);
 var app = new Vue({
     el: '#zegar',
