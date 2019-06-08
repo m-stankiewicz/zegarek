@@ -35,31 +35,24 @@ function timerData (year,month,day,hour,minute,second,milisecond)
         this.isNotOneDay = this.Dni!=1;
         this.isMoreThanZero = this.secondsToEvent>0;
     }
-}
+};
 
-var maturaTimeData = new timerData(2019, 5 , 6 , 9 , 0 , 0 , 0);
 var sessionTimeData = new timerData(2019, 6 , 10 , 9 , 0 , 0 , 0);
 var app = new Vue({
     el: '#zegar',
     data: mainTimeData,
-})
+});
 
 var app2 = new Vue({
     el: '#zegar2',
-    data: maturaTimeData,
-})
-
-var app3 = new Vue({
-    el: '#zegar3',
     data: sessionTimeData,
-})
+});
+
 function changeDate()
 {
     actualTime=new Date();
-    maturaTimeData.updateTimer();
     sessionTimeData.updateTimer();
     mainTimeData.updateTimer();
-}
+};
+
 setInterval(changeDate,1000);
-var chopinAudio = new Audio('audio.ogg');
-chopinAudio.play();
