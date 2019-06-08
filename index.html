@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
-    <script src="script.min.js" async></script>
+    <script src="script.js" async></script>
 </head>
 <body>
 
@@ -17,12 +17,6 @@
         <span v-html="Godzina"></span>:<span v-html="Minuta"></span>:<span v-html="Sekunda"></span> <br><span v-html="Dzien"></span> <span v-html="Miesiac"></span> <span v-html="Rok"></span> r.<br>
     </div>
     <div id="zegar2" class="zegarek">
-        <div v-if="isMoreThanZero">
-            <h2>Do matury zostało</h2>
-            <span v-html="Dni"></span> <span v-if="isNotOneDay">dni</span> <span v-if="!isNotOneDay">dzień</span>  <span v-html="Godziny"></span>:<span v-html="Minuty"></span>:<span v-html="Sekundy"><br>
-        </div>
-    </div>
-    <div id="zegar3" class="zegarek">
         <div v-if="isMoreThanZero">
             <h2>Do sesji zostało</h2>
             <span v-html="Dni"></span> <span v-if="isNotOneDay">dni</span> <span v-if="!isNotOneDay">dzień</span>  <span v-html="Godziny"></span>:<span v-html="Minuty"></span>:<span v-html="Sekundy"><br>
